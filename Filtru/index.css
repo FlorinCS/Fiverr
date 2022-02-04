@@ -1,0 +1,177 @@
+*{
+    padding:0;
+    margin:0;
+   
+}
+body{
+    background-color:rgb(14, 196, 196);
+}
+#break1{
+    display:none;
+}
+#main{
+    background-size: cover;
+    height:auto;
+
+    margin-top:5%;
+    background-image:linear-gradient(180deg,rgba(0,131,196,.77) 0%,rgba(0,131,196,.82) 100%),url(https://relaunch.edv-repair.de/wp-content/uploads/2018/05/edv-repair.jpg?_t=1569069056)  !important
+}
+#grid{
+    display:grid;
+    grid-template-areas:  "h1 h1 h1"
+                            "m1 m2 m3"
+                            "b1 b2 b3";
+    grid-column-gap:20px;
+    grid-row-gap:20px;
+    padding-top:50px;
+    padding-bottom:150px;
+   
+    
+}
+
+#center{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    word-wrap: break-word;
+   
+}
+#center2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.filter{
+   padding-right:170px;
+   padding-left:10px;
+   padding-top:10px;
+   padding-bottom:10px;
+   border:none;
+   background:white;
+   border-radius:5px;
+   font-size:17px;
+   font-family:Arial;
+   color:rgb(110, 105, 105);
+
+}
+#eins{
+    grid-area:m1;
+
+}
+#zwei{
+    grid-area:m2;
+
+}
+#drei{
+    grid-area:m3;
+}
+#null{
+    grid-area:h1;
+  
+    
+   
+}
+#button{
+    grid-area:b1;
+    padding-top:20px;
+}
+button{
+    padding:8px 16px;
+    font-size: 20px;
+    font-family:Arial;
+   background-color: #4CAF50;
+   border:none;
+   border-radius: 5px;
+}    
+button a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+.para{
+    font-size:17px;
+    color:white;
+    padding:7px;
+    font-weight:bold;
+    font-family:Arial;
+}
+#title{
+    color:white;
+    background-color:#0082c4;
+    font-size:20px;
+    font-family: Arial;
+    padding:10px 20px;
+    border-radius: 5px;
+    font-weight:bold;
+    width:100%;
+    max-width:600px;
+}
+.opt{
+    display:none;
+}
+
+@media only screen and (max-width: 1100px) {
+   .filter{
+       padding-right:80px;
+   }
+  }
+  @media only screen and (max-width:930px) {
+    .filter{
+        padding-right:70px;
+    }
+    
+   }
+   @media only screen and (max-width:880px) {
+   
+    .filter{
+        padding-right:40px;
+    }
+   }
+
+   @media only screen and (max-width:800px) {
+    .filter{
+        padding-right:170px;
+        width:100%;
+
+    }
+    
+    #break1{
+        display:unset;
+    }
+    #grid{
+        display:grid;
+        grid-template-areas: "h1"
+                         
+                         "m1"
+                         "m2"
+                         "m3"
+                         "b1"
+                        ;
+        grid-column-gap:20px;
+        grid-row-gap:20px;
+        padding-top:50px;
+       
+       
+    }
+    #null{
+        grid-area:h1;
+  
+    }
+   
+   }
+   @media only screen and (max-width:400px) {
+
+.filter{
+    padding-right:50px;
+}
+
+#title{
+    max-width:200px;
+}
+main{
+    height:90vh;
+}
+   }

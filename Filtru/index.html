@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css"   rel="stylesheet">
+    <title>Filtru</title>
+</head>
+<body>
+   
+    <div id="main">
+    <div id="center">
+      
+    <div id="grid">
+        <div id="null">
+            <p id="title">Deutschlandweite Handy-Reparatur<br id="break1"> direkt online bestellen!</p>
+        </div>
+        <div id="button">
+         
+            <button><a id="links" onclick="retur(data)" href="#">Wähle eine Reparatur aus</a></button>
+            </div>
+           
+      
+    <div id="eins">
+      
+     <p class="para">Hersteller :</p>
+    <select class="filter" name="Hersteller auswählen:" id="hersteller" onchange="testul()">
+        <option value="" disabled selected>Hersteller auswählen:</option>
+        <option id="apple" value="apple"  >Apple</option>
+        <option id="samsung" value="samsung" >Samsung</option>
+        <option id="xiaomi" value="xiaomi">Xiaomi</option>
+        <option id="google" value="google" >Google</option>
+        <option id="sony" value="sony" >Sony</option>
+        <option id="lg" value="lg" >LG</option>
+        <option id="huawei" value="huawei" >Huawei</option>
+        <option id="motorola" value="motorola" >Motorola</option>
+        <option id="microsoft" value="microsoft" >Microsoft Reparatur</option>
+        <option id="oneplus" value="oneplus" >OnePlus</option>
+        <option id="nokia" value="nokia" >Nokia Lumia</option>
+        <option id="oppo" value="oppo" >Oppo Reparatur</option>
+        
+    </select>
+    </div>
+    <div id="zwei">
+
+
+        <p class="para">Gerät :</p>
+        <select class="filter" name="Geräte auswählen:" id="gerät" onchange="testul2()">
+            <option id="auswahl" value="" disabled selected>Geräte auswählen</option>
+           
+            <option class="opt" id="option1" value="option1" ></option>
+            <option class="opt" id="option2" value="option2" ></option>
+            <option class="opt" id="option3" value="option3"></option>
+            <option class="opt" id="option4" value="option4" ></option>
+            <option class="opt" id="option5" value="option5" ></option>
+            <option class="opt" id="option6" value="option6"></option>
+            <option class="opt" id="option7" value="option7" ></option>
+            <option class="opt" id="option8" value="option8" ></option>
+            <option class="opt" id="option9" value="option9"></option>
+            <option class="opt" id="option10" value="option10" ></option>
+            <option class="opt" id="option11" value="option11" ></option>
+            <option class="opt" id="option12" value="option12"></option>
+            <option class="opt" id="option13" value="option13" ></option>
+            <option class="opt" id="option14" value="option14" ></option>
+            <option class="opt" id="option15" value="option15"></option>
+            <option class="opt" id="option16" value="option16" ></option>
+            <option class="opt" id="option17" value="option17" ></option>
+            <option class="opt" id="option18" value="option18"></option>
+            <option class="opt" id="option19" value="option19" ></option>
+            <option class="opt" id="option20" value="option20" ></option>
+            <option class="opt" id="option21" value="option21"></option>
+            <option class="opt" id="option22" value="option22" ></option>
+            <option class="opt" id="option23" value="option23" ></option>
+            <option class="opt" id="option24" value="option24"></option>
+            <option class="opt" id="option25" value="option25" ></option>
+            <option class="opt" id="option26" value="option26" ></option>
+            <option class="opt" id="option27" value="option27"></option>
+            <option class="opt" id="option28" value="option28" ></option>
+            <option class="opt" id="option29" value="option29" ></option>
+            <option class="opt" id="option30" value="option30"></option>
+            <option class="opt" id="option31" value="option31" ></option>
+            <option class="opt" id="option32" value="option32" ></option>
+            <option class="opt" id="option33" value="option33"></option>
+            <option class="opt" id="option34" value="option34" ></option>
+            <option class="opt" id="option35" value="option35" ></option>
+            <option class="opt" id="option36" value="option36"></option>
+            <option class="opt" id="option37" value="option37" ></option>
+            <option class="opt" id="option38" value="option38" ></option>
+            <option class="opt" id="option39" value="option39"></option>
+            <option class="opt" id="option40" value="option40" ></option>
+            <option class="opt" id="option41" value="option41" ></option>
+            <option class="opt" id="option42" value="option42"></option>
+            <option class="opt" id="option43" value="option43" ></option>
+            <option class="opt" id="option44" value="option44" ></option>
+            <option class="opt" id="option45" value="option45"></option>
+            <option class="opt" id="option46" value="option46" ></option>
+            <option class="opt" id="option47" value="option47" ></option>
+            <option class="opt" id="option48" value="option48"></option>
+            <option class="opt" id="option49" value="option49" ></option>
+            <option class="opt" id="option50" value="option50" ></option>
+            <option class="opt" id="option51" value="option51"></option>
+            <option class="opt" id="option52" value="option52" ></option>
+            <option class="opt" id="option53" value="option53" ></option>
+            <option class="opt" id="option54" value="option54"></option>
+            <option class="opt" id="option55" value="option55" ></option>
+            <option class="opt" id="option56" value="option56" ></option>
+            <option class="opt" id="option57" value="option57"></option>
+            <option class="opt" id="option58" value="option58"></option>
+        </select>
+
+    </div>
+    <div id="drei">
+
+
+        <p class="para">Reparatur :</p>
+        <select class="filter" name="Reparatur auswählen:" id="reparatur" onchange="testul3()">
+            <option value="" disabled selected>Reparatur auswählen:</option>
+            <option class="opt" id="optiona" value="optiona" ></option>
+            <option class="opt" id="optionb" value="optionb" ></option>
+            <option class="opt" id="optionc" value="optionc"></option>
+            <option class="opt" id="optiond" value="optiond" ></option>
+            <option class="opt" id="optione" value="optione" ></option>
+            <option class="opt" id="optionf" value="optionf"></option>
+            <option class="opt" id="optiong" value="optiong" ></option>
+            <option class="opt" id="optionh" value="optionh" ></option>
+            <option class="opt" id="optioni" value="optioni"></option>
+            <option class="opt" id="optionj" value="optionj" ></option>
+            <option class="opt" id="optionk" value="optionk" ></option>
+            <option class="opt" id="optionl" value="optionl"></option>
+            <option class="opt" id="optionm" value="optionm" ></option>
+            <option class="opt" id="optionn" value="optionn" ></option>
+            <option class="opt" id="optiono" value="optiono"></option>
+            <option class="opt" id="optionp" value="optionp" ></option>
+        </select>
+
+    </div>
+</div>
+ </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
