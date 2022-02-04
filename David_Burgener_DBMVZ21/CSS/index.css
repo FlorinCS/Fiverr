@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+ 
+  html{
+    scroll-behavior: smooth;
+  }
+  .wrapper{
+    background:rgb(27, 27, 27);
+    position: fixed;
+    width: 100%;
+    z-index:2;
+  }
+  .wrapper nav{
+      z-index:2;
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .Inhalt1{
+      height:70px;
+    display: flex;
+    align-items: center;
+  }
+  #liste-logo{
+    display:none;
+}
+  nav .Inhalt1 .links{
+     
+    margin-left: 80px;
+    display: flex;
+  }
+  .Inhalt1 .logo a{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .Inhalt1 .links li{
+    list-style: none;
+    line-height: 70px;
+  }
+  .Inhalt1 .links li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-bottom:2px solid transparent;
+    
+
+  }
+  
+  
+  .Inhalt1 .links li a:hover{
+      border-bottom:2px solid white;
+  }
+  
+  .wrapper .menu-icon{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+  }
+  .wrapper .menu-icon{
+    display: block;
+  }
+    
+  .wrapper input{
+    display:block;
+  }
+  
+  
+  #grid{
+      display:grid;
+      grid-template-areas: "h1 h2"
+                               "h3 h4"
+                               "h5 h6"
+                               "h7 h8"
+                                "h9 h10"
+                                "h11 h12"
+                                "h13 h14";
+     grid-row-gap:100px;
+   grid-column-gap:80px;
+     
+      height:auto;
+  }
+  #eins{
+    grid-area:h1;
+    
+
+  }
+  #zwei{
+    grid-area:h2;
+    padding-right:5%;
+  }
+  #titel{
+      font-size:40px;
+  }
+  #zwei{
+      margin-top:60px;
+      
+     
+  }
+  #ziel{
+    grid-area:h3;
+    margin-left:10%;
+    font-family: 'Poppins', sans-serif;
+  }
+  #ziel h1{
+    font-size: 40px;
+    
+  }
+  #ziel h3{
+    font-size:20px;
+    
+  }
+  #Foto4{
+    grid-area:h4;
+    margin-top:20px;
+    text-align:center;
+    padding-right:5%;
+  }
+  #foto4{
+    width:100%;
+    height:auto;
+    max-width:700px;
+    border-radius:3px ;
+  }
+  span{
+   font-size:24px;
+   color:black;
+  }
+  .über{
+      padding-bottom:10px;
+      font-size:20px;
+      color:rgb(54, 51, 51);
+      padding-right:5%;
+      
+     
+  }
+  #Foto1{
+
+    width:100%;
+    height:auto;
+    max-width:400px;
+    border-radius:8px;
+
+  }
+  #Foto{
+    position:sticky;
+    top:0;
+    margin-top:5%;
+    margin-left:30%;
+    
+  }
+ 
+  #lebenslauf{
+    grid-area:h5;
+    margin-left:10%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size:30px;
+    
+  }
+  #Foto5{
+    width:100%;
+    height:auto;
+    max-width:600px;
+    border:none;
+    border-radius:8px;
+    
+  }
+  #QA{
+    grid-area:h6;
+    font-family: 'Poppins', sans-serif;
+ 
+    margin-top:0px;
+    padding-right:5%;
+  }
+  #QA p{
+    padding-bottom:15px;
+    font-size:25px;
+  }
+#footer{
+  grid-area:f1;
+  padding-left:5%;
+  color:white;
+ 
+  
+}
+#grid2{
+  background-color: black;
+  display:grid;
+  grid-template-areas: "f1 f2";
+  padding-bottom:10px;
+
+}
+
+#footer2{
+  margin-top:25px;
+  grid-area:f2;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+  #footer2 p:hover{
+   border-bottom:2px solid white;
+  }
+ address:hover{
+   border-bottom: 2px solid white;
+ }
+  .br{
+    display:none;
+  }
+  #Schullaufbahn{
+    grid-area:h10;
+    margin-right:5%;
+    
+  }
+  #SLB{
+    grid-area:h9;
+    margin-left:5%;
+    
+  }
+  #Foto6{
+    width:100%;
+    height:auto;
+    max-width:600px;
+    border-radius:8px;
+   
+  
+  }
+  #Foto7{
+    width:100%;
+    height:auto;
+    max-width:400px;
+    border-radius:8px;
+   
+  }
+  #Sport{
+    grid-area:h11;
+
+    
+  }
+#SPLB{
+  grid-area:h12;
+  margin-left:5%;
+ 
+}
+#Foto8{
+  width:100%;
+  height:auto;
+  max-width:500px;
+  border-radius: 8px;
+}
+#Familie{
+  grid-area:h14;
+  padding-bottom:5%;
+ 
+}
+#Umfeld{
+  grid-area:h13;
+  margin-left:5%;
+  padding-bottom:5%;
+
+}
+#All{
+  background-image: url("../Bilder/Sky.jpg");
+ background-size: cover;
+  height:100vh;
+  width:100%;
+  
+  
+}
+#titel2{
+  text-align:center;
+  color:black;
+  font-size:30px;
+  padding-top:9%;
+ 
+}
+#center2{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  padding-top:3%;
+
+}
+#but a{
+  text-decoration: none;
+  color:white;
+  font-size:16px;
+}
+#but:hover{
+  background-color: rgb(27, 26, 26);
+}
+#but{
+  background-color: black;
+  padding:15px 30px 15px 30px;
+  border-radius:10px;
+  border:none;
+}
+#span1{
+  font-size: 4vw;
+}
+#span2{
+  font-size:2vw;
+}
+#span3{
+ font-size:2.5vw;
+}
+video{
+  width:100%;
+  height:auto;
+ max-width:1000px;
+ display: block;
+margin: 0 auto;
+padding-bottom:5%;
+}
+#Empf{
+  padding-bottom:20px;
+  padding-left:3%;
+}
+.linkss{
+  padding-left:3%;
+ color:black;
+ 
+}
+.linkss:hover{
+  color:blue;
+}
+
+
+  @media screen and (max-width: 1315px){
+      
+    .wrapper nav{
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    nav .Inhalt1 .links{
+      margin-left: 30px;
+    }
+    .Inhalt1 .links li a{
+      padding: 8px 13px;
+    }
+    #titel{
+      font-size:35px;
+    }
+   
+  }
+  
+  @media screen and (max-width:1297px){
+  
+  
+    #logo{
+        padding-left:50px;
+    }
+      #liste-logo{
+          display:unset;
+      }
+    .wrapper .menu-icon{
+      display: block;
+    }
+   
+    #liste-wrap .links{
+        display:none;
+     
+      position: fixed;
+      background:  rgba(0, 0, 0, 0.5);
+      height: 60%;
+      width: 100%;
+      top: 70px;
+      left: 0%;
+      margin-left: 0;
+      max-width: 350px;
+      overflow-y: auto;
+      padding-bottom: 10px;
+     
+    }
+    #responsive-zeigen:hover .links {
+    
+     display:unset;
+    }
+    .Inhalt1 .links li{
+      margin: 15px 20px;
+    }
+   
+    .Inhalt1 .links li a{
+      line-height: 40px;
+      font-size: 20px;
+      display: block;
+      padding: 8px 18px;
+      cursor: pointer;
+      
+     
+    }
+    .Inhalt1 .links li a{
+        color:white;
+    }
+    .Inhalt1 .links li a:hover:hover{
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+  
+    
+    .Inhalt1 .links ul{
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      max-height: 0px;
+      overflow: hidden;
+    }
+    
+    
+    .Inhalt1 .links ul li{
+      margin: 7px 20px;
+    }
+    .Inhalt1 .links ul li a{
+      font-size: 18px;
+      line-height: 30px;
+      border-radius: 5px!important;
+    }
+
+   
+  }
+  @media screen and (max-width:1047px){
+    #über{
+      padding-right:0;
+    }
+    #zwei{
+      padding-right:0;
+    }
+   
+    #grid2{
+      background-color: black;
+      display:grid;
+      grid-template-areas: "f1"
+                           "f2";
+      padding-bottom:10px;
+    
+    }
+    #footer2{
+      padding-left:5%;
+      grid-area:f2;
+    }
+    #footer{
+      grid-area:f1;
+    }
+    #span1{
+      font-size:30px;
+    }
+    #span2{
+      font-size:20px;
+    }
+    #span3{
+     font-size:25px;
+    }
+    #Sport{
+      grid-area:h11;
+    }
+  #SPLB{
+    grid-area:h12;
+    margin-left:0;
+  }
+    #Foto4{
+      padding-right:0%;
+      grid-area:h3;
+    }
+    #lebenslauf{
+     margin-left:0%;
+    }
+
+    #Familie{
+      grid-area:h13;
+    }
+    #Umfeld{
+      grid-area:h14;
+    }
+    #grid{
+      display:grid;
+      grid-template-areas: "h1"
+                               "h2"
+                               "h3"
+                               "h4"
+                                 "h5"
+                                 "h6"
+                                 "h7"
+                                 "h8"
+                                 "h9"
+                                 "h10"
+                                 "h11"
+                                 "h12"
+                                 "h13"
+                                 "h14";
+     grid-row-gap:50px;
+   grid-column-gap:270px;
+     
+      height:auto;
+      text-align:center;
+
+  }
+  #QA{
+    padding-right:0%;
+     padding-left:0;
+     padding-right:0;
+  }
+  #ziel{
+    margin-left:0%;
+    grid-area:h4;
+  }
+  #ziel h3{
+    padding-left:5%;
+    padding-right:5%;
+  }
+  #Schullaufbahn{
+    grid-area:h9;
+    margin-right:0;
+   
+  }
+  #SLB{
+    grid-area:h10;
+    
+  }
+  #Foto6{
+    margin-left:0;
+    margin-right:0;
+  }
+  #Foto{
+    margin-left:0;
+  }
+  }
+  @media screen and (max-width: 420px){
+   
+    .br{
+      display:unset;
+    }
+    
+    #grid2{
+      background-color: black;
+      display:grid;
+      grid-template-areas: "f1"
+                           "f2";
+      padding-bottom:10px;
+    
+    }
+    
+    #footer2 p{
+      display:block;
+    }
+    #address{
+      display:block;
+    }
+    #Foto4{
+      padding-right:0%;
+    }
+    #lebenslauf{
+      margin-left:0%;
+    }
+    .wrapper nav{
+      padding: 0 10px;
+    }
+    .content .logo a{
+      font-size: 27px;
+    }
+    .Inhalt1 .logo a{
+        font-size:20px;
+    }
+    #footer2{
+      padding-left:5%;
+    }
+    #lebenslauf h1{
+      font-size:30px;
+    }
+  }
+  
+  
+ 
+  
+  
+  
+
+
+  

@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    position:relative;
+    scroll-behavior: smooth;
+  }
+ 
+ 
+  .wrapper{
+    background:rgb(27, 27, 27);
+    position: fixed;
+    width: 100%;
+    z-index:2;
+  }
+  .wrapper nav{
+      z-index:2;
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .Inhalt1{
+      height:70px;
+    display: flex;
+    align-items: center;
+  }
+  #liste-logo{
+    display:none;
+}
+  nav .Inhalt1 .links{
+     
+    margin-left: 80px;
+    display: flex;
+  }
+  .Inhalt1 .logo a{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .Inhalt1 .links li{
+    list-style: none;
+    line-height: 70px;
+  }
+  .Inhalt1 .links li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-bottom:2px solid transparent;
+    
+
+  }
+  
+  
+  .Inhalt1 .links li a:hover{
+      border-bottom:2px solid white;
+  }
+  
+  .wrapper .menu-icon{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+  }
+  .wrapper .menu-icon{
+    display: block;
+  }
+    
+  .wrapper input{
+    display:block;
+  }
+  
+
+#footer{
+  grid-area:f1;
+  padding-left:5%;
+  color:white;
+ 
+  
+}
+#grid2{
+  background-color: black;
+  display:grid;
+  grid-template-areas: "f1 f2";
+  padding-bottom:10px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  max-width:5000px;
+}
+
+#footer2{
+  margin-top:25px;
+  grid-area:f2;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+  #footer2 p:hover{
+   border-bottom:2px solid white;
+  }
+ #ImpAddress:hover{
+   border-bottom: 2px solid white;
+ }
+ #impressum{
+    font-family: 'Poppins', sans-serif;
+    padding-left:5%;
+ }
+ #ImpTitle{
+     padding-bottom:15px;
+ }
+ 
+  @media screen and (max-width: 1315px){
+      
+    .wrapper nav{
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    nav .Inhalt1 .links{
+      margin-left: 30px;
+    }
+    .Inhalt1 .links li a{
+      padding: 8px 13px;
+    }
+   
+  }
+  
+  @media screen and (max-width:1097px){
+  
+    #grid2{
+      background-color: black;
+      display:grid;
+      grid-template-areas: "f1"
+                           "f2";
+      padding-bottom:10px;
+    
+    }
+    #footer2{
+      padding-left:5%;
+      grid-area:f2;
+    }
+    #footer{
+      grid-area:f1;
+    }
+    #logo{
+        padding-left:50px;
+    }
+      #liste-logo{
+          display:unset;
+      }
+    .wrapper .menu-icon{
+      display: block;
+    }
+   
+    #liste-wrap .links{
+        display:none;
+     
+      position: fixed;
+      background:  rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+      top: 70px;
+      left: 0%;
+      margin-left: 0;
+      max-width: 350px;
+      overflow-y: auto;
+      padding-bottom: 100px;
+     
+    }
+    #responsive-zeigen:hover .links {
+    
+     display:unset;
+    }
+    .Inhalt1 .links li{
+      margin: 15px 20px;
+    }
+   
+    .Inhalt1 .links li a{
+      line-height: 40px;
+      font-size: 20px;
+      display: block;
+      padding: 8px 18px;
+      cursor: pointer;
+      
+     
+    }
+    .Inhalt1 .links li a{
+        color:white;
+    }
+    .Inhalt1 .links li a:hover:hover{
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+  
+    
+    .Inhalt1 .links ul{
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      max-height: 0px;
+      overflow: hidden;
+    }
+    
+    .Inhalt1 .links #show-items:checked ~ ul{
+      max-height: 100vh;
+    }
+    .Inhalt1 .links ul li{
+      margin: 7px 20px;
+    }
+    .Inhalt1 .links ul li a{
+      font-size: 18px;
+      line-height: 30px;
+      border-radius: 5px!important;
+    }
+  }
+  
+  @media screen and (max-width: 420px){
+      #titel2{
+          font-size:15px;
+      }
+    .wrapper nav{
+      padding: 0 10px;
+    }
+    .content .logo a{
+      font-size: 27px;
+    }
+    .Inhalt1 .logo a{
+        font-size:20px;
+    }
+    #grid2{
+        background-color: black;
+        display:grid;
+        grid-template-areas: "f1"
+                             "f2";
+        padding-bottom:10px;
+      
+      }
+     #footer2{
+       padding-left:5%;
+     }
+  }
+  
+
+
+
