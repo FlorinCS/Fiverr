@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="./CSS/index.css" /> 
+    <title>Warenkorb</title>
+</head>
+<body>
+    <header>
+        <div id="grid">
+
+            <div id="Logo">
+            
+              <a style="text-decoration:none;color:rgb(60, 111, 153)" href="startseite.html"> <img id="logo" src="./FOTOS/Logo1.png" alt="Logo" /> </a>
+            <h2 class="line">  <a style="text-decoration:none;color:rgb(60, 111, 153)" href="startseite.html">YourRoadStar</a></h2>
+            </div>
+          
+            <div class="line" id="Home"><h2 class="mainsub" style="text-align:center"><a style="text-decoration:none;color:rgb(60, 111, 153)" href="startseite.html">Home</a></h2></div>
+            <div class="line" id="Produkten"><h2 class="mainsub" style="text-align:center;">E-Bikes</h2>
+              
+            <a href="./produkt1.html"><h2 class="sub">Haibike</h2></a><br>
+            <a href="./produkt2.html"><h2 class="sub">Cube</h2></a>
+           
+          </div>
+          
+            <div  id="Warenkorb">
+              <a style="text-decoration:none;color:rgb(60, 111, 153)" href="Warenkorb.html"><img id="warenkorb" src="./FOTOS/Warenkorb1.png" alt="Logo" /> </a>
+            </div>
+          </div>
+    </header>
+
+<main>
+   <div class="center">
+
+      <div>
+        <p><a class="Breadcrumb" href="startseite.html">Homepage</a> / <a class="Breadcrumb" href="Warenkorb.html">Warenkorb</a></p><br>
+       <h1>WARENKORB</h1><br>
+      <hr><br> 
+        <div id="grid4">
+            <div id="ARTIKEL">
+                <h2>ARTIKEL</h2>
+            </div>
+            <div id="NAME">
+                <h2>NAME</h2>
+            </div>
+            <div id="MENGE">
+                <h2>MENGE</h2>
+            </div>
+            <div id="GESAMT">
+                <h2>GESAMT</h2>
+            </div>
+         <div id="Photo">
+            <img id="Bike1" class="Bike" src="./FOTOS/E-bike1.jpg" alt="Foto von E-Bike1" />
+         </div>
+         <div id="Names">
+             <h3>Haibike FullSeven 4 - 500 Wh <br> 2021 - 27,5 Zoll - Fully</h3><br>
+             <h3>3.499,- €</h3><br>
+             <p>inkl. MwSt.</p><br>
+             <p>vorrätig - in 2-3 Tage bei Ihnen</p>
+         </div>
+         <div id="Menge">
+            <select name="menge" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+         </div>
+         <div id="Gesamt"><h3>3.499,- €</h3></div>
+          
+       <div id="hr"><hr></div>
+     <div id="Photo2">
+      
+        <img id="Bike2" class="Bike" src="./FOTOS/E-bike2.jpg" alt="Foto von E-Bike2" />
+     </div>
+     <div id="Names2">
+         <h3>Haibike FullSeven 4 - 500 Wh <br> 2021 - 27,5 Zoll - Fully</h3><br>
+         <h3>3.499,- €</h3><br>
+         <p>inkl. MwSt.</p><br>
+         <p>vorrätig - in 2-3 Tage bei Ihnen</p>
+     </div>
+     <div id="Menge2"><select name="menge" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select></div>
+     <div id="Gesamt2"><h3>3.499,- €</h3></div>
+        </div>
+        <br>
+        <hr>
+        <div id="grid5">
+            <div id="hr2"><hr></div><br>
+            <div id="ZSume"><br>
+                <h2>Zwischensumme</h2>
+                <p>Versandkosten</p>
+                <br>
+            </div><br>
+            <div id="GSume">
+                <h1>Gesamtsumme</h1>
+                <p>Alle Angaben in Euro inkl. MwSt.</p>
+            </div>
+            <div id="Versand">
+                <h2>9,99 -€</h2>
+                
+            </div><br>
+            <div id="Sume">
+                <h1>7.000, -€</h1>
+                
+            </div><br>
+           
+               </div>
+               <div style="display:inline-flex; gap:20px;">
+               <div id="b1">
+                <button  class="btn" ><a href="#"><h4>Jetzt kaufen</h4></a></button>
+                
+                </div>
+                <div id="b2">
+                <button id="bt2" class="btn" ><a href="#"><h4>Löschen</h4></a></button>
+                </div>
+               </div>
+               
+</main>
+    <script src="./JS/index.js"></script>
+</body>
+</html>

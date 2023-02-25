@@ -1,0 +1,298 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+
+   color:rgb(60, 111, 153);
+
+}
+
+main{
+    margin-top:30px;
+    padding-bottom:15px;
+}
+
+#Produkten:hover{
+    background-color: rgb(245, 248, 46);
+}
+.sub{
+    display:none;
+    
+    
+}
+#Produkten a{
+    text-decoration:none;
+    color:rgb(60, 111, 153);
+}
+
+#Produkten a:hover{
+    
+    color:steelblue;
+    text-decoration: underline;
+}
+
+#Produkten:hover  .sub{
+    display:unset;
+}
+
+.mainsub:hover{
+    background-color: yellow;
+}
+
+#grid{
+    display:grid;
+    grid-template-areas:"h1 h2 h3 h4 h5 h6 h7 h8 h9 h10";
+    background-color: rgb(245, 248, 46);
+    height:60px;
+}
+
+#Logo{
+    grid-area: h1;
+    display:flex;
+}
+
+#Home{
+    grid-area: h4;
+}
+#Produkten{
+    grid-area: h5;
+}
+#Warenkorb{
+    grid-area: h9;
+    margin-top:10px;
+}
+
+.line{
+    line-height:60px;
+    vertical-align: middle;
+    text-align:center;
+    z-index:2;
+    width:127.48px;
+    border-radius:10px;
+}
+#title1{
+    font-family: 'Roboto', sans-serif;
+    color:steelblue;
+    text-align: center;
+    font-weight: bold;
+    padding:20px;
+    z-index: 1;
+}
+
+.center{
+
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
+
+.Bike{
+
+    width:100%;
+    max-width:250px;
+}
+.ProduktBike{
+    width:100%;
+    max-width:500px;
+}
+.BikeName{
+  
+    text-align:center;
+    width:100%;
+    max-width:250px;
+    padding-top: 20px;
+    padding-bottom:20px;
+
+}
+
+.flex{
+    display:flex;
+}
+
+.space{
+    border:1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    padding:20px;
+    z-index:100;
+}
+
+.space:hover{
+    border:1px solid black;
+}
+
+#grid1{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:50px;
+    margin-top:20px;
+}
+#grid1 a{
+    text-decoration: none;
+    color:black;
+}
+
+.grid2{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:50px;
+    margin-top:30px;
+}
+
+.Breadcrumb{
+    text-decoration:none;
+    color:rgb(122, 122, 122);
+    
+}
+.Breadcrumb:hover{
+    text-decoration:none;
+    color:steelblue;
+    
+}
+
+.btn{
+    padding:15px 40px 15px 40px;
+    background-color: rgb(51, 98, 136);
+    border:none;
+    border-radius:10px;
+}
+
+.btn:hover{
+    background:steelblue
+}
+.btn a{
+    text-decoration:none;
+    color:white;
+     
+}
+
+.description{
+    width:100%;
+    max-width:800px;
+    margin-top:50px;
+}
+.description{
+    color:steelblue
+}
+.description h4{
+    color:grey
+}
+
+#warenkorb{
+    width:100%;
+    max-width:70px;
+}
+
+#logo{
+    width:100%;
+    max-width:100px;
+}
+
+
+#grid4{
+    display:grid;
+    grid-template-areas:"a1 a2 a3 a4"
+                        "b1 b2 b3 b4"
+                        "hr hr hr hr"
+                        "c1 c2 c3 c4";
+                        grid-column-gap:100px;
+                        grid-row-gap:50px;
+                      
+}
+
+#hr{
+    grid-area:hr;
+}
+#Photo{
+    grid-area:b1;
+}
+#Names{
+    grid-area:b2;
+}
+#Menge{
+    grid-area:b3;
+    text-align:center;
+}
+#Gesamt{
+    grid-area:b4;
+    text-align:center;
+}
+#Photo2{
+    grid-area:c1;
+}
+#Names2{
+    grid-area:c2;
+}
+#Menge2{
+    grid-area:c3;
+    text-align:center;
+}
+#Gesamt2{
+    grid-area:c4;
+    text-align:center;
+}
+#ARTIKEL{
+    grid-area:a1;
+}
+#NAME{
+    grid-area:a2;
+}
+#MENGE{
+    grid-area:a3;
+}
+#GESAMT{
+    grid-area:a4;
+}
+
+#grid5{
+
+    display:grid;
+    grid-template-areas:"g1 g2"
+                           "i1 i1"
+                             "s1 s2"
+                             ;
+
+  margin-top:50px;
+
+}
+
+#ZSume{
+
+    grid-area:g1;
+}
+#Versand{
+
+    grid-area:g2;
+}
+#Versand h2{
+    line-height: 90px;
+    vertical-align: middle;
+}
+#GSume{
+
+    grid-area:s1;
+}
+#Sume{
+
+    grid-area:s2;
+}
+
+#bt2{
+    background-color:white ;
+    
+}
+#bt2 h4{
+   color:black;
+    
+}
+
+#bt2 h4:hover{
+   text-decoration: underline;
+     
+ }
+
+
+
+  

@@ -1,0 +1,468 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image:linear-gradient(to bottom right,skyblue ,rgb(202, 223, 231));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+ 
+   
+}
+/* Navigation - Alle Seiten */
+header{
+ padding:30px;
+   color:white;
+   width:80%;
+}
+
+
+main{
+    margin-top:30px;
+    padding-bottom:15px;
+    padding:30px;
+    width:80%;
+
+}
+#Logo{
+    text-align:center;
+    
+}
+#Logo:hover{
+   
+    margin-left:15px;
+}
+#logo{
+    width:100%;
+    max-width:160px;
+  
+}
+
+#grid{
+    display:grid;
+    grid-template-areas:"h1 h2 h3 h4 h5 h6 h7 h8 h9 h10";
+    background-color: steelblue;
+    height:60px;
+    margin-top:20px;
+    text-align:center;
+    width:100%;
+
+}
+
+
+
+
+   
+
+
+
+#Home{
+    grid-area: h1;
+    border-right:1px solid black;
+    border-radius: 0%;
+}
+
+#Kontakt{
+    grid-area:h2;
+    border-right:1px solid black;
+    border-radius: 0%;
+}
+#Impressum{
+    grid-area:h3;
+    border-right:1px solid black;
+    border-radius: 0%;
+}
+#Warenkorb{
+    grid-area: h10;
+    margin-top:10px;
+}
+
+.line{
+    line-height:60px;
+    vertical-align: middle;
+    text-align:center;
+    z-index:2;
+  
+    border-radius:10px;
+}
+.center{
+
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
+
+/* CSS Startseite */
+
+#title1{
+    font-family: 'Roboto', sans-serif;
+    color:steelblue;
+    text-align: center;
+    font-weight: bold;
+    padding:20px;
+    z-index: 1;
+}
+
+.Bike{
+
+    width:100%;
+    max-width:250px;
+}
+.BikeW{
+
+    width:100%;
+    max-width:150px;
+}
+.ProduktBike{
+    width:100%;
+    max-width:500px;
+}
+.BikeName{
+  
+    text-align:center;
+    width:100%;
+    max-width:250px;
+    padding-top: 20px;
+    padding-bottom:20px;
+
+}
+
+.flex{
+    display:flex;
+}
+
+.space{
+    border:1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    padding:20px;
+    z-index:100;
+}
+
+.space:hover{
+    text-shadow: 5px 5px 10px #777 !important;
+}
+
+#grid1{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:50px;
+    margin-top:20px;
+}
+#grid1 a{
+    text-decoration: none;
+    color:black;
+}
+/* CSS Produkt1 und Produkt2*/
+.grid2{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:50px;
+    margin-top:30px;
+}
+
+.btn{
+    padding:15px 40px 15px 40px;
+    background-color: rgb(51, 98, 136);
+    border:none;
+    border-radius:10px;
+}
+
+.btn:hover{
+    background:steelblue
+}
+.btn a{
+    text-decoration:none;
+    color:white;
+     
+}
+
+.description{
+    width:100%;
+    max-width:800px;
+    margin-top:50px;
+}
+.description{
+    color:steelblue
+}
+.description h4{
+    color:grey
+}
+
+#warenkorb{
+    width:100%;
+    max-width:70px;
+}
+.Rezension{
+    background:white;
+    width:fit-content;
+    padding:20px;
+    border-radius:10px;
+   
+}
+
+/*CSS Warenkorb */
+
+#grid4{
+    display:grid;
+    grid-template-areas:"a1 a2 a3 a4 a5"
+                        "b1 b2 b3 b4 b5"
+                        "hr hr hr hr hr"
+                        "c1 c2 c3 c4 c5";
+                        grid-column-gap:100px;
+                        grid-row-gap:50px;
+                        text-align:center;
+                      
+}
+
+#hr{
+    grid-area:hr;
+}
+#Photo{
+    grid-area:b1;
+}
+#stk1{
+    grid-area:b2;
+}
+
+#Menge{
+    grid-area:b3;
+    text-align:center;
+}
+#Löschen{
+    grid-area:b4;
+    text-align:center;
+}
+#Gesamt{
+    grid-area:b5;
+    text-align:center;
+}
+#Photo2{
+    grid-area:c1;
+}
+
+#Löschen2{
+    grid-area:c4;
+    text-align:center;
+}
+#stk2{
+    grid-area:c2;
+    text-align:center;
+}
+#Gesamt2{
+    grid-area:c5;
+    text-align:center;
+}
+#ARTIKEL{
+    grid-area:a1;
+}
+#STK{
+    grid-area:a2;
+}
+#MENGE{
+    grid-area:a3;
+}
+#LÖSCHEN{
+    grid-area:a4;
+}
+#GESAMT{
+    grid-area:a5;
+}
+#grid5{
+
+    display:grid;
+    grid-template-areas:"g1 g2"
+                           "i1 i1"
+                             "s1 s2"
+                             ;
+
+  margin-top:50px;
+
+}
+
+#ZSume{
+
+    grid-area:g1;
+}
+#Versand{
+
+    grid-area:g2;
+}
+#Versand h2{
+    line-height: 90px;
+    vertical-align: middle;
+}
+#GSume{
+
+    grid-area:s1;
+}
+#Sume{
+
+    grid-area:s2;
+}
+
+#bt2{
+    background-color:red ;
+    
+}
+#bt2 h4{
+   color:white;
+    
+}
+
+
+
+ /* Impressum */
+
+ #Liste{
+    margin-top:24px;
+    
+ }
+ #Liste ul li{
+    background: white;
+ }
+ #Liste li{
+    text-align:left;
+    width:200px;
+    height:100px;
+    padding:10px;
+    border:1px solid black;
+    border-radius:10px;
+    text-shadow: 10px 10px 15px silver;
+ }
+ 
+ /*Kontakt */
+
+ #formK{
+    margin-top:-100px;
+ }
+ table {border-collapse: collapse;
+}
+tbody{
+    border:1px solid black;
+
+}
+tbody label{
+    font-size:20px;
+    width:150px;
+}
+tbody td{
+    display:flex;
+    padding:15px;
+}
+
+td{
+    padding-top:10px
+}
+#eigeneGruppe{
+    display:flex;
+    border-top:3px solid black;
+    
+}
+#eigeneGruppe input,button{
+
+    padding-left:10px;
+    padding-right:10px;
+}
+
+/*footer */
+
+footer{
+    background:steelblue;
+    color:white;
+    text-align:center;
+    padding:30px;
+    width:80%;
+   
+   
+}
+
+
+  /*CSS Warenkorb */
+
+#grid4{
+    display:flex;
+  
+                        grid-column-gap:100px;
+                        grid-row-gap:50px;
+                        padding-bottom:15px;
+                        text-align:center;
+                      
+}
+#grid4 div{
+    width:130px;
+    
+}
+#grids{
+
+    display:flex;
+   column-gap: 100px;
+   row-gap: 50px;
+   padding-bottom:105px;
+    
+}
+#grids div{
+    width:130px;
+    text-align:center;
+}
+
+
+#Menge{
+   
+    text-align:center;
+}
+#Löschen{
+   
+    text-align:center;
+}
+#Gesamt{
+
+    text-align:center;
+}
+
+
+
+#grid5{
+
+    display:grid;
+    grid-template-areas:"g1 g2"
+                           "i1 i1"
+                             "s1 s2"
+                             ;
+
+  margin-top:50px;
+
+}
+
+#ZSume{
+
+    grid-area:g1;
+}
+#Versand{
+
+    grid-area:g2;
+}
+#Versand h2{
+    line-height: 90px;
+    vertical-align: middle;
+}
+#GSume{
+
+    grid-area:s1;
+}
+#Sume{
+
+    grid-area:s2;
+}
+
+#bt2{
+    background-color:red ;
+    
+}
+#bt2 h4{
+   color:white;
+    
+}
+
+

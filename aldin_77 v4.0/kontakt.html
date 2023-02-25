@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./CSS/index.css" /> 
+    <title>Kontakt</title>
+</head>
+<body>
+  <div class="center">
+    <header>
+        <div class="center">
+            <div id="Logo">
+          
+              <a style="text-decoration:none;color:rgb(60, 111, 153)" href="startseite.html"> <img id="logo" src="./FOTOS/Logo1.png" alt="Logo" /> </a>
+            <h5>  <a style="text-decoration:none;color:rgb(60, 111, 153)" href="startseite.html">YourRoadStar</a></h5>
+            </div>
+            </div>
+            <nav>
+        <div id="grid">
+      
+          
+        
+          <div  class="line" id="Home"><h2 class="mainsub" style="text-align:center"><a class="it2" style="text-decoration:none;color:white" href="startseite.html">Startseite</a></h2></div>
+         
+        <div  class="line" id="Kontakt"><h2 class="mainsub" style="text-align:center"><a class="it2" style="text-decoration:none;color:white" href="kontakt.html">Kontakt</a></h2></div>
+        <div   class="line" id="Impressum"><h2 class="mainsub" style="text-align:center"><a class="it2" style="text-decoration:none;color:white" href="impressum.html">Impressum</a></h2></div>
+          <div  id="Warenkorb">
+            <a style="text-decoration:none;color:rgb(60, 111, 153)" href="Warenkorb.html"><img id="warenkorb" src="./FOTOS/Warenkorb1.png" alt="Logo" /> </a>
+          </div>
+        </div>
+        </nav>
+    </header>
+    </div>
+    <div class="center">
+      <main>
+        <div class="center">
+            <div>
+                <form id="formK">
+        <table>
+            <thead>
+                <tr>
+            <th><h1>KONTAKT</h1></th>
+              </tr>
+              </thead><br>
+             <tbody style="background:white;">
+        <tr>
+          <td><label for="Vorname">Vorname</label><br><input type="text" id="Vorname" name="Vorname" pattern="[A-Za-z]+" maxlength="40" placeholder="Vorname" /></td>
+          </tr>
+          <td><label for="Nachname">Nachname</label><br><input type="text" id="Nachname" name="Nachname" pattern="[A-Za-z]+" maxlength="40"placeholder="Nachname"/></td>
+        </tr>
+          <td><label for="E-Mail">E-Mail*</label><br><input type="email" id="E-Mail" name="E-Mail" required maxlength="40"placeholder="E-Mail"/></td>
+        </tr>
+          <td><label for="Kundenummer">Kundennummer</label><br><input type="text" id="Kundenummmer" pattern="[0-9]{7}(?:p|[0-9]){1}" name="Kundenummer" maxlength="40"placeholder="Kundennummer"/></th><br>
+          </tr>
+          <td><label for="Betreff">Betreff*</label><br><input type="text" id="Betreff" name="Betreff" required maxlength="40" placeholder="Betreff"/></td>
+        </tr>
+          <td><label for="Kategorie">Kategorie</label><br><select name="Kategorie" id="Kategorie">
+            <option value="Haibike">Haibike</option>
+            <option value="Cube">Cube</option>
+            <option value="Andere">Andere</option>
+          </select></td>
+        </tr>
+          <td><label style="line-height: 220px;" for="Beschreibung">Beschreibung*</label><br><textarea rows="14" cols="40" maxlength="400" name="Beschreibung" id="Beschreibung" required maxlength="40"placeholder="Beschreibung"></textarea></td><br>
+        </tr>
+    
+    </tr>
+    <tr>
+      <td ><i>* Plichfelder</i></td>
+    </tr>
+    <div >
+      
+      <tr id="eigeneGruppe">
+    <td><input   type="reset" value="Formular löschen"/></td>
+    
+    
+    <td><button  value="Senden">Senden</button></td>
+    
+    </tr>
+    
+    </div>
+      </tbody>
+      
+      </table>
+      </form>
+    </div>
+    </div>
+    </main>
+</div>
+<div class="center">
+  <footer id="start">
+    <h4>@ Name Autor 1 , Name Autor 2 - <time>2022</time></h4>
+  </footer>
+  </div>
+</body>
+</html>
