@@ -1,0 +1,137 @@
+Hier das ist der Code von der Beschreibung der Listingsoftware die als erstes in der Word Datei zu sehen ist:
+Den entsprechenden Abschnitt mit dem Bild und der Beschreibung, habe ich dir ja markiert, aber vielleicht brauchst du ja den ganzen Code 
+um alles nachvollziehen zu können, keine Ahnung ich kann fast gar kein html.
+
+
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <style>
+            <!--
+            img{max-width:100%}
+            -->
+        </style>
+        <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <style type="text/css">
+            <!--
+            #brdr{background:#fff}.description{color: #111 !important;font-size: 14px !important;}.total_body{background:#fff;border:3px solid #ccc;display:block;margin:0 auto;overflow:hidden;width:950px;color:#111;border-radius: 15px;}.descriptions,.tabs{width:100%;display:block;overflow:hidden}.descriptions{font-family:Arial;font-weight:400;margin-top:25px}.title{background-color: #fff !important; color: #058CD3 !important; font-size: 35px !important; font-weight: 700 !important; padding-bottom: 20px; padding-top: 20px; text-align: center !important;}.tabs span{padding:0 33px}.footerss{font-size:xx-large}.images,.images img{max-width:100%}.description li{padding-bottom: 10px;}.title h1{font-weight: bold !important;}.tabs{line-height: 25px;}#delivery_right > img{width: 100%;}button.accordion{background-color: #058CD3; border: medium none; color: #fff; cursor: pointer; font-size: 26px; font-weight: bold; outline: medium none; padding: 3px 21px; text-align: center; transition: all 0.4s ease 0s; width: 100%;}.panel{box-shadow: none; margin-bottom: 0;}ul li{padding-bottom: 5px;}ul{padding-top: 15px;}button.accordion.active, button.accordion1:hover{background-color: #ddd;color:#058CD3;}div.panel{padding: 0 18px;background-color: white;overflow: hidden;transition: max-height 0.2s ease-out;}@media only screen and (max-width:767px){.total_body{width:320px}.tabs span{font-size:14px;line-height:20px;padding:5px 2px}.title{font-size:19px;margin:0}.footerss{font-size:15px}}
+            -->
+        </style>
+
+        <!-- Bild und Beschreibung -->
+
+        <div class="total_body">
+            <div class="col-lg-12 title" id="brdr">
+                <h1>${item_title}</h1>
+            </div>
+            <div class="col-lg-12 descriptions">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col_left" id="bo">
+                    <div class="images">${item_image}</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="rght">
+                    <div class="description">
+                        <div>${item_features_bullet}</div>
+                        <br />
+                        <p>
+                            ${item_description}<br />
+                            <br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bild und Beschreibung -->
+
+            <button class="accordion">Versand</button>
+            <div class="panel" style="max-height: 478px;">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <ul>
+                        <li><span style="font-size: 12pt;">Wir bieten KOSTENLOSEN Versand f&uuml;r alle Bestellungen!</span></li>
+                        <li><span style="font-size: 12pt;">Wir versenden innerhalb von zwei Werktagen nach Zahlungseingang, in der Regel fr&uuml;her.</span></li>
+                        <li><span style="font-size: 12pt;">Wir verwenden eine Auswahl von Versanddiensten wie UPS, DHL, Hermes usw.</span></li>
+                        <li><span style="font-size: 12pt;">Lokale Abholungen und kombinierte Versandoptionen sind derzeit nicht verf&uuml;gbar.</span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div id="delivery_right">
+                        <br />
+                        <img src="https://res.cloudinary.com/hmdenahha/image/upload/v1486463259/shipping_zpsehr4l7lo_vs2j70.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Kehrt Zur&uuml;</button>
+            <div class="panel">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <ul>
+                        <li><span style="font-size: 12pt;">Bestellungen k&ouml;nnen bis zu 1 Monat nach dem Kaufdatum zur&uuml;ckgegeben werden.</span></li>
+                        <li><span style="font-size: 12pt;">Jedes Produkt, das Sie zur&uuml;cksenden, muss sich in dem Zustand befinden, </span></li>
+                        <li><span style="font-size: 12pt;">In dem Sie es erhalten haben und in der Originalverpackung. Bitte bewahren Sie den Beleg auf.</span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div id="delivery_right"><img src="https://res.cloudinary.com/hmdenahha/image/upload/v1486462923/returns_zpsxr9puwik_mwvvon.jpg" alt="" /></div>
+                </div>
+            </div>
+            <button class="accordion">Zahlung</button>
+            <div class="panel">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <p>
+                        <br />
+                        <span style="font-size: 12pt;">Wir akzeptieren Zahlungen auf eine der folgenden Arten: <span style="font-family: 'arial black', sans-serif;">Pay-Pal</span></span><br />
+                        <br />
+                        <span style="font-size: 12pt;">
+                            Bitte zahlen Sie so schnell wie m&ouml;glich, damit wir Ihren Artikel schneller an Sie versenden <br />
+                            <br />
+                            k&ouml;nnen!
+                        </span>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div id="delivery_right" style="text-align: center;"><img style="width: 80%; text-align: center;" src="https://res.cloudinary.com/hmdenahha/image/upload/v1486462923/new-paypal-logo_kevpez.jpg" alt="" /></div>
+                </div>
+            </div>
+            <button class="accordion">Feedback</button>
+            <div class="panel">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <p>
+                        <br />
+                        <span style="font-size: 12pt;">Kundenzufriedenheit ist uns sehr wichtig.</span><br />
+                        <br />
+                        <span style="font-size: 12pt;">Wenn Sie irgendwelche Probleme mit Ihrer Bestellung haben, </span><br />
+                        <br />
+                        <span style="font-size: 12pt;">kontaktieren Sie uns bitte und wir werden unser Bestes tun, um Sie zufrieden zu stellen</span>.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div id="delivery_right">
+                        <br />
+                        <br />
+                        <img src="https://res.cloudinary.com/hmdenahha/image/upload/v1486462924/5-stars_dybxdt.jpg" alt="" /><br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Kontaktiere Uns</button>
+            <div class="panel">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <br />
+                    <p>
+                        <span style="font-size: 12pt;">Wenn Sie Fragen haben, kontaktieren Sie uns bitte &uuml;ber eBay. </span><br />
+                        <br />
+                        <span style="font-size: 12pt;">Wir antworten normalerweise innerhalb von 24 Stunden an Wochentagen.</span>
+                    </p>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"></div>
+            </div>
+            <div class="description" style="text-align: center;"><a style="font-family: Arial; font-weight: bold; font-size: 20px;" target="_blank">Bitte besuchen Sie unseren eBay-Shop, um andere Artikel zum Verkauf zu sehen!</a></div>
+            <div class="col-lg-12 title" id="brdr">
+                <p><span class="footerss">Danke f&uuml;r den Einkauf in unserem Gesch&auml;ft.</span></p>
+            </div>
+        </div>
+    </body>
+</html>

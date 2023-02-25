@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Test</title>
+
+<style>
+body {
+	
+}
+
+#content {
+	width:auto;
+	text-align: center;
+	padding-top:5%;
+	padding-bottom:5%;
+	height:auto;
+	background-color: black;
+	
+}
+
+#content img {
+	
+}
+
+.overlay_link {
+	background: rgba(0,0,255,.25);
+	position: absolute;
+}
+
+#image {
+	position: relative;
+	height:auto;
+	width:100%;
+
+}
+
+#square {
+	height: 10%;
+	width: 20%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position:absolute;
+	background: rgba(0,0,255,.25);
+	z-index:1;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<div id="content">
+	<div id="image">
+
+		<img src="image.png" alt="Snow" style="width:100%;z-index:2;">
+		
+
+		<div id="square"></div>
+	</div>
+</div>
+
+</body>
+</html>

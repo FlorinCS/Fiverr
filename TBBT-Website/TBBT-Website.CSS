@@ -1,0 +1,147 @@
+body 
+{
+    background-color: #28282B;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+
+header
+{
+    background-color: #343434;
+    padding: 15px;
+    box-shadow: 0 0 20px;
+}
+
+
+header li
+{
+    display: inline;
+    padding-left: 45px;
+}
+
+header li a
+{
+    color:white;
+    text-decoration: none;
+    padding: 13px;
+    transition: .3s ease;
+    font-family: Century Gothic;
+}
+
+
+header li a:hover
+{
+    color:#F08080;
+}
+
+header ul #kontakt a
+{   
+    color:white;
+    background-color: #C21807;
+    border-radius: 30px;
+    float:right;
+    position: relative;
+    top: -15px;
+    transition: .3 ease;
+}
+
+header ul #kontakt a:hover
+{   
+ background-color: #F08080;
+}
+
+
+header li img
+{
+    width: 180px;
+    float: left;
+    margin-top: -30px; 
+}
+
+
+
+
+.active
+{
+    color:#F08080;
+}
+
+
+main #banner
+{
+    box-shadow: 0 0 10px;
+    
+}
+
+
+main #ueberschrift
+{
+    color:white;
+    text-align: left;
+    font-size: 50px;
+    font-family: Century Gothic;
+}
+
+main #unterueberschrift{
+    color:white;
+    text-align: left;
+    font-size: 30px;
+    font-family: Dubai Light;
+}
+
+
+main #content
+{
+    color:white;
+    font-family: Century Gothic;
+    /*padding: 10px 900px 50px 100px ;*/
+    padding:5%;
+    text-align:justify;
+    line-height:2;
+    font-size: 20px;
+    
+}
+
+
+
+.footer{
+    margin: 0;
+    padding: 20px ;
+    background-color: #171717;
+}
+
+.footer li{
+    display: inline;
+    padding-left: 45px;
+}
+
+
+.inner-footer li a{
+    text-decoration: none;
+    padding: 0px 5%;
+    font-size: 18px;
+    color: white;
+    font-family: Century Gothic;
+}
+
+.test{
+    display:grid;
+    grid-template-columns: auto auto;
+    column-gap: 4%;
+}
+#urknall img{
+    
+}
+
+
+
+
+
+
+
+
+
+

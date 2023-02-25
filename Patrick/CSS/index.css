@@ -1,0 +1,240 @@
+*{
+  padding:0;
+  margin:0;
+font-family: 'Roboto', sans-serif;
+}
+body{
+  position:relative
+
+}
+
+#title1{
+  padding-right:2%;
+  font-size:3vw;
+  padding-bottom:3%;
+}
+#grid1{
+  padding-top:25px;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+
+  background-color:orange;
+  width:100%;
+  max-width:12%;
+  text-align:center;
+  padding-bottom:1000px;
+  position:fixed;
+  top:0;
+}
+.menu{
+  text-decoration: none;
+color:black;
+}
+#title2{
+  text-align:center;
+  font-size:4vw;
+}
+#subtitle{
+    text-align:center;
+}
+.sec1{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding-top:3%;
+  font-weight:600;
+ font-family: 'Poppins', sans-serif;
+
+}
+#text1{
+  text-align:justify;
+  font-size:25px;
+  padding-top:20px;
+}
+#center2{
+  width:100%;
+  max-width:450px;
+}
+#head1{
+  padding-bottom:20px;
+  background-color:#41A3EE;
+}
+#art1{
+    background-color:#9DABB6;
+    margin-left:300px;
+}
+#text2{
+  text-align:justify;
+  font-size:25px;
+  padding-bottom:30px;
+
+}
+#text3{
+  text-align:justify;
+  font-size:25px;
+  padding-bottom:30px;
+
+}
+#sub2{
+  font-size:30px;
+  padding-top:10px;
+  padding-bottom:10px;
+  color:blue;
+}
+#sub3{
+  font-size:30px;
+  padding-top:10px;
+  padding-bottom:10px;
+  color:blue;
+}
+#logo{
+  width:100%;
+  max-width:300px;
+
+
+}
+#aside1{
+ font-weight:bold;
+ text-align:center;
+ border:1px solid black;
+ border-radius:5px;
+  float:right;
+
+  display:grid;
+  grid-template-rows:auto auto auto auto;
+  background-color:#F0AA05;
+}
+#center4{
+  text-align:center;
+
+}
+#grid1 div h3{
+  padding-bottom:15px;
+  padding-top:15px;
+}
+#grid1 div h3:hover{
+  background-color:red;
+
+}
+#eins{
+  color:green;
+}
+#zwei{
+  color:yellow;
+}
+#drei{
+  color:red;
+}
+#vier{
+  color:purple;
+}
+#funf{
+  color:blue;
+}
+#foot{
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:10px;
+  index:1;
+  position:relative;
+  background-color:#DE4141;
+  font-size: 20px;
+  font-weight:bold;
+}
+#link1{
+  padding-bottom:20px;
+}
+#foto2{
+  width:100%;
+  max-width:450px;
+  border-radius:5px;
+  padding-bottom:10px;
+}
+#italic1{
+  text-align:center;
+
+}
+#Grund{
+  font-size:30px;
+  padding-top:50px;
+  padding-bottom:15px;
+}
+.haupt{
+  font-size:25px;
+  padding-bottom:40px;
+  color:#145DB2;
+}
+#list li ul{
+color:black;
+font-size:20px;
+}
+#reverse{
+  font-size:17px;
+  display: flex;
+   flex-direction: column-reverse;
+}
+
+
+#input{
+
+  border:none;
+  border-radius:8px;
+  padding:10px 20px 10px 20px;
+
+}
+#anmeldung{
+  padding:5px 10px 5px 10px;
+  margin-top:15px;
+  border:none;
+  background-color: red;
+  color:white;
+  border-radius: 8px;
+}
+#Formular{
+  font-size:30px;
+}
+#form{
+  padding-bottom:20px;
+
+}
+#anmeldung:hover{
+background-color:#F23636;
+
+}
+#center5{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: #9DABB6;
+  padding-bottom:25px;
+}
+table{
+  border:1px solid black;
+  text-align:center;
+  font-size:20px;
+ background-color: white;
+
+}
+table tr td{
+  border:1px solid black;
+}
+table  th{
+  border:1px solid black;
+  padding-left:10px;
+  padding-right:10px;
+
+}
+#absatz{
+  font-size:2vw;
+  padding-bottom:15px;
+  padding-top:30px;
+  font-weight:600;
+  color:#0000FF;
+}
+#bildlink{
+  text-decoration:none;
+  color:black;
+}
+#bildlink:hover{
+  color:blue;
+}
