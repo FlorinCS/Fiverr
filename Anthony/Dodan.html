@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSSSS.css">
+    <script src="javamava.js" type="text/javascript" defer></script> 
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+</head>
+<body>
+
+  
+  <!--  <div class="controls">
+         <div id="js-tray" class="tray">
+             <div id="js-tray-slide" class="tray__slide">
+                 
+             </div>
+            
+         </div>
+
+    </div>-->
+   <div id="centered">
+    <h1>Wählen Sie eine Farbe</h1>
+    <div id="grid">
+       
+   <div class="boxe" id="red" onclick="red()"><a href="#"><p class="open">RED</p></a></div>
+    <div class="boxe" id="blue" onclick="blue()"><a href="#"><p class="open">BLUE</p></a></div>
+    <div class="boxe" id="green" onclick="green()"><a href="#"><p class="open">GREEN</p></a></div>
+    <div class="boxe"  id="yellow" onclick="yellow()"><a href="#"><p class="closed">YELLOW</p></a></div>
+    <div class="boxe" id="black" onclick="black()"><a href="#"><p class="open">BLACK</p></a></div>
+    <div class="boxe" style="border:1px solid black;" id="white" onclick="white()"><a href="#"><p class="closed">WHITE</p></a></div>
+    <div class="boxe" id="purple" onclick="purple()"><a href="#"><p class="open">PURPLE</p></a></div>
+    <div class="boxe" id="orange" onclick="orange()"><a href="#"><p class="open">ORANGE</p></a></div>
+    </div>
+   </div>
+    <div class="options">
+        <div class="option --is-active" id="teile1" data-option="SeitenwandLinks">
+            <img src="Seitenwand_grün.png" alt=""/>
+        </div>
+        <div id="teile2" class="option --is-active" data-option="SeitenwandRechts">
+            <img  src="Seitenwand_grün.png" alt=""/>
+        </div>
+        <div id="teile3" class="option --is-active" data-option="Hebel">
+            <img src="Hebel_Grün.png" alt=""/>
+        </div>
+        <div  id="teile4" class="option --is-active" data-option="Arm">
+            <img src="Arm_grün.png" alt=""/>
+        </div>
+    </div>
+   
+    <model-viewer bounds="tight" disable-zoom src="Katapult.glb" 
+    ar ar-modes="webxr scene-viewer quick-look" camera-controls 
+    environment-image="neutral" poster="poster.webp" shadow-intensity="3.2"  auto-rotate >
+    </model-viewer>
+
+
+    <!--------  action="https://postmail.invotes.com/send"
+    method="post" id="email_form" itemid="email_form"    -----------------------EMAIL DINGS----------------------------------->
+ <div id="grid10">
+     <div>
+    <form >
+
+    
+    <p></p>
+    <textarea id="texta" name="text" placeholder="Test" rows="7"></textarea>
+    <p></p>
+  
+      <!-- return urls can be fully qualified -OR-
+         start with / for root relative -OR-
+         start with . for url relative --> 
+    
+   
+
+    <!-- set the reply-to address -->
+    <!-- <input type="text" name="reply_to"
+                placeholder="Your Email" /> -->
+
+    <!-- to append extra fields, use the extra_ prefix.
+        Entries will be appended to your message body. -->
+    <!-- <input type="text" name="extra_phone_number"
+                placeholder="Phone Number" /> -->
+
+    <!-- to split your message into 160 chars
+         for an sms gateway -->
+    <!-- <input type="hidden"
+                name="sms_format" value="true" /> -->
+    
+  
+   
+    <!-- return urls can be fully qualified -OR-
+ start with / for root relative -OR-
+ start with . for url relative -->
+ 
+
+
+
+</form>
+</div>
+<div>
+<button id="button" onclick="Test()">Send</button>
+
+</div>
+<div>
+    <button id="button" onclick="Test2()">Reset</button>
+</div>
+     </div>
+<!-- optional, prevents the submit button from being pressed more than once -->
+<script>
+   
+</script> 
+
+
+
+
+
+
+    
+</body>
+</html>
