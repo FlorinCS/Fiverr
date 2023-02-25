@@ -1,0 +1,38 @@
+Ich bin eBay-Verkäufer und wechsle die Software, mit der ich meine Produkte zu listen.
+Die Beschreibung will ich beibehalten, aber es funktioniert leider nicht wenn man es 1:1 einfach in die neue Software reinkopiert.
+Deswegen habe ich die anfangs zwei verschiedene Beschreibungen, einbisschen vermischt.
+Es gibt "Platzhalter" für das Produktbild und den Produkttext.
+
+Beim alten waren das diese hier: 
+
+_BEGIN_DESCRIPTION_SECTION_
+
+_DESCRIPTION_CONTENT_
+
+_END_DESCRIPTION_SECTION_
+
+_BEGIN_FEATURES_SECTION_
+
+_FEATURES_CONTENT_
+
+_END_FEATURES_SECTION_
+
+_BEGIN_TABLE_SECTION_
+
+_TABLE_CONTENT_
+
+_END_TABLE_SECTION_
+
+Beim neuen sind das diese hier und diese sollen dann eben auch benutzt werden:
+
+${item_title}
+${item_image}
+${item_features_bullet}
+
+${item_description}
+
+
+Nur als Erklärung, damit du nicht verwirrst bist oder so.
+
+Bei Fragen stehe ich dir gerne zur Verfügung :)
+
