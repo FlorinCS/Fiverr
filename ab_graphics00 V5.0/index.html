@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kalender</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script defer src='index.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body id="body" touched="clickBody()">
+    <div class="wrapper">
+        <div class="container-calendar">
+            <h3 id="monthAndYear"></h3>
+            <div class="button-container-calendar">
+             <div class="footer-container-calendar">    <button id="previous" onclick="previous()"><img class="arrows" src="Arrows/arrow-left.svg" alt="left-arrow"></button>
+                 <select id="month" onfocus="adjust2()" onchange="jump()">
+                     <option value=0><p>Januar</p></option>
+                     <option value=1>Februar</option>
+                     <option value=2>März</option>
+                     <option value=3>April</option>
+                     <option value=4>Mai</option>
+                     <option value=5>Juni</option>
+                     <option value=6>July</option>
+                     <option value=7>August</option>
+                     <option value=8>September</option>
+                     <option value=9>October</option>
+                     <option value=10>November</option>
+                     <option value=11>Dezember</option>
+                 </select>
+                 <select id="year" onfocus="adjust1()" onchange="jump()"></select>       
+                <button id="next" onclick="next()"><img class="arrows" src="Arrows/arrow-right.svg" alt="right-arrow"></button>
+            </div>
+             </div>
+             
+            <table class="table-calendar" id="calendar" data-lang="en">
+                <thead id="thead-month"></thead>
+                <tbody id="calendar-body"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

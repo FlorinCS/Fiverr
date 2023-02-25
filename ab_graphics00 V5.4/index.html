@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kalender</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+         font-family: 'Lato', sans-serif;
+
+        }
+        .wrapper {
+            margin: 15px auto;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .container-calendar {
+            background: transparent;
+            padding: 15px;
+            max-width: 550px;
+            width: 100%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        .button-container-calendar button {
+            cursor: pointer;
+            display: inline-block;
+            zoom: 1;
+            color: black;
+            background:transparent;
+            border:none;
+            font-size:35px;
+            line-height:32px;
+            
+        }
+        @-moz-document url-prefix() {
+            .button-container-calendar button {
+        
+                line-height:38px;
+            
+        }
+        }
+        .table-calendar {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-calendar td, .table-calendar th {
+            padding: 18px 26px;
+            text-align: center;
+            vertical-align: top;
+            font-weight:300;
+            font-size:21px;
+        }
+        .table-calendar th{
+            padding-top:5px;
+        }
+        .date-picker{
+            font-weight:400 !important;
+            cursor:pointer;
+            font-size:21px;
+        }
+        .date-picker a:focus-within{
+            border-bottom: 2px solid currentColor;
+        }
+
+        .date-picker.selected {
+            font-weight: bold;
+        }
+
+        .date-picker.selected a {
+            border-bottom: 2px solid currentColor;
+        }
+        a{
+        text-decoration:none;
+        color:black;
+        }
+
+        #monthAndYear {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .button-container-calendar {
+            width: 91%;
+            position: relative;
+            margin-bottom: 1em;
+            margin-left: 20px;
+            overflow: hidden;
+            border-bottom: 1px solid #dddddd;
+            clear: both;
+        }
+
+        #previous {
+            float: left;
+        }
+
+        #next {
+            float: right;
+        }
+
+        .footer-container-calendar {
+            margin-top: 1em;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            width: 100%;
+            max-width: 513px;
+            padding-bottom:8px;
+        }
+
+        .footer-container-calendar select {
+            font-family: "Cormorant Garamond";
+            font-size:25px;
+            cursor: pointer;
+            display: inline-block;
+            zoom: 1;
+            background: transparent;
+            color: black;
+            border: none;
+            border-radius: 3px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: ''
+        }
+
+        .greyed-out a {
+            color: #bbbbbb !important;
+        }
+
+        .footer-container-calendar label { 
+        padding-left: 80px
+        }
+
+        .arrows{
+            width:40px;
+        }
+        #year{
+            width:60px;
+            line-height: 48px;
+        }
+        #month{
+            width:131px;
+            line-height: 48px;
+        }
+        option{
+            font-size:21px;
+            font-family: 'Lato', sans-serif;
+        }
+        _::-webkit-full-page-media, _:future, :root #year {
+
+            width:48px;
+            line-height: 41px;
+        
+        }
+        _::-webkit-full-page-media, _:future, :root #month {
+
+            width:103px;
+            line-height: 41px;
+        
+        }
+        _::-webkit-full-page-media, _:future, :root #previous {
+
+        padding-right: 4px;
+        
+        }
+
+        _::-webkit-full-page-media, _:future, :root .footer-container-calendar select {
+            font-size:20px;
+        }
+        _::-webkit-full-page-media, _:future, :root .footer-container-calendar{
+            width:100%;
+            max-width:464px;
+
+        } 
+        _::-webkit-full-page-media, _:future, :root .table-calendar td, .table-calendar th {
+            font-size:16px;
+        }
+        _::-webkit-full-page-media, _:future, :root .arrows {
+            width:35px;
+        }
+        _::-webkit-full-page-media, _:future, :root .container-calendar{
+            max-width:493px;
+            width:100%;
+        }
+        _::-webkit-full-page-media, _:future, :root .button-container-calendar{
+            width:93%;
+            margin-left:22px;
+        }
+        @media screen and (max-width: 550px) {
+            .container-calendar {
+                padding:0px;
+            }
+            .table-calendar td, .table-calendar th {
+            padding: 18px 24px;
+            text-align: center;
+            vertical-align: top;
+            font-weight:300;
+            font-size:18px;
+            }
+            _::-webkit-full-page-media, _:future, :root  .table-calendar td, .table-calendar th {
+                font-size:18px;
+            }
+        }
+        @media screen and (max-width: 494px) {
+            .table-calendar td, .table-calendar th {
+            padding: 18px 14px;
+            text-align: center;
+            vertical-align: top;
+            font-weight:300;
+            font-size:16px;
+            }
+            _::-webkit-full-page-media, _:future, :root  .table-calendar td, .table-calendar th {
+                font-size:16px;
+            }
+            .footer-container-calendar select{
+                font-size:23px;
+            }
+            #month{
+                width: 115px;
+            }
+            #year{
+                width: 50px;
+            }
+           
+        }
+        @media screen and (max-width: 449px) {
+            .table-calendar td, .table-calendar th {
+            padding: 18px 12px;
+            text-align: center;
+            vertical-align: top;
+            font-weight:300;
+            font-size:16px;
+            }
+            _::-webkit-full-page-media, _:future, :root  .table-calendar td, .table-calendar th {
+                font-size:16px;
+            }
+            .footer-container-calendar select{
+                font-size:21px;
+            }
+            #month{
+                width: 115px;
+            }
+            #year{
+                width: 50px;
+            }
+           
+        }
+        @media screen and (max-width: 404px) {
+            .table-calendar td, .table-calendar th {
+            padding: 18px 0px;
+            text-align: center;
+            vertical-align: top;
+            font-weight:300;
+            font-size:16px;
+            }
+            _::-webkit-full-page-media, _:future, :root  .table-calendar td, .table-calendar th {
+                font-size:16px;
+            }
+            .footer-container-calendar select{
+                font-size:21px;
+            }
+            #month{
+                width: 100px;
+            }
+            #year{
+                width: 44px;
+            }
+           
+        }
+        @media screen and (max-width: 360px) {
+            .table-calendar td, .table-calendar th {
+            padding: 18px 0px;
+            text-align: center;
+            vertical-align: top;
+            font-weight:300;
+            font-size:16px;
+            }
+            _::-webkit-full-page-media, _:future, :root  .table-calendar td, .table-calendar th {
+                font-size:16px;
+            }
+            .footer-container-calendar select{
+                font-size:21px;
+            }
+            #month{
+                width: 100px;
+            }
+            #year{
+                width: 44px;
+            }
+           
+        }
+    </style>
+    <script defer async type="module">
+        function generate_year_range(start, end) {
+            var years = "";
+            for (var year = start; year <= end; year++) {
+                years += "<option value='" + year + "'>" + year + "</option>";
+            }
+            return years;
+        }
+
+        let today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+        let selectYear = document.getElementById("year");
+        let selectMonth = document.getElementById("month");
+        let actualYear=new Date().getFullYear();
+
+        let createYear = generate_year_range(actualYear, actualYear+5);
+
+        document.getElementById("year").innerHTML = createYear;
+
+        var calendar = document.getElementById("calendar");
+        var lang = calendar.getAttribute('data-lang');
+
+        var months = "";
+        var days = "";
+
+        var monthDefault = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var dayDefault = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+
+            months = monthDefault;
+            days = dayDefault;
+
+        var $dataHead = "<tr>";
+        for (let dhead in days) {
+            $dataHead += "<th data-days='" + days[dhead] + "'>" + days[dhead] + "</th>";
+        }
+        $dataHead += "</tr>";
+
+
+        document.getElementById("thead-month").innerHTML = $dataHead;
+
+        let monthAndYear = document.getElementById("monthAndYear");
+
+        // MY STUFF
+        const CALENDAR_ID = 'service.9356@gmail.com';
+        const API_KEY = 'AIzaSyBxvSbBjR6yuegHL_Ci7l0fvZrQXn0ohDI';
+
+        let events = [];
+
+        async function fetchEvents() {
+            events = await getEvents();
+            events = events.map(transformEvents);
+        }
+
+        const getEvents = async() => {
+            const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
+            let response = await fetch(url);
+            let data = await response.json();
+            data = data.items;
+            return data;
+        }
+
+        const transformEvents = (event) => {
+            const start = transformDate(event.start.dateTime || event.start.date, false);
+            const end = transformDate(event.end.dateTime || event.end.date, true);
+            return { start, end };
+        }
+
+        const transformDate = (unparsed, end) => {
+            const millis = Date.parse(unparsed);
+            let date = new Date(millis);
+            if(end && date.getHours() === 1 && date.getMinutes() === 0) {
+                date = new Date(millis - 1000 * 60 * 60 * 2);
+            }
+            const day = date.getDate();
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            return new Date(year, month, day);
+        }
+
+        const isBusy = (date, month, year) => {
+            const dateToCheck = new Date(year, month, date);
+            return events.some(event => {
+                return event.start <= dateToCheck && event.end >= dateToCheck;
+            });
+        }
+
+        function next() {
+            currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+            currentMonth = (currentMonth + 1) % 12;
+            showCalendar(currentMonth, currentYear);
+        }
+
+        function previous() {
+            currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+            currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+            showCalendar(currentMonth, currentYear);
+        }
+
+        function jump() {
+            
+            currentYear = parseInt(selectYear.value);
+            currentMonth = parseInt(selectMonth.value);
+            showCalendar(currentMonth, currentYear);
+        }
+
+        function showCalendar(month, year) {
+
+            console.log(events);
+
+            var firstDay = ( new Date( year, month ) ).getDay() - 1;
+
+            let tbl = document.getElementById("calendar-body");
+            
+            tbl.innerHTML = "";
+            
+            selectYear.value = year;
+            selectMonth.value = month;
+
+            // creating all cells
+            var date = 1;
+            for ( var i = 0; i < 6; i++ ) {
+                
+                var row = document.createElement("tr");
+
+                for ( var j = 0; j < 7; j++ ) {
+                    if ( i === 0 && j < firstDay ) {
+                        let cell = document.createElement( "td" );
+                        let cellText = document.createTextNode("");
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                    } else if (date > daysInMonth(month, year)) {
+                        break;
+                    } else {
+                        let cell = document.createElement("td");
+                        cell.setAttribute("data-date", date);
+                        cell.setAttribute("data-month", month + 1);
+                        cell.setAttribute("data-year", year);
+                        cell.setAttribute("data-month_name", months[month]);
+                        cell.className = "date-picker";
+                        if(isBusy(date, month, year)) {
+                            cell.className += " greyed-out"
+                        }
+                        cell.innerHTML = "<a href='#'>" + date + "</a>";
+
+                        if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                            cell.className += " selected";
+                        }
+                        row.appendChild(cell);
+                        date++;
+                    }
+
+
+                }
+
+                tbl.appendChild(row);
+            }
+
+        }
+
+        function daysInMonth(iMonth, iYear) {
+            return 32 - new Date(iYear, iMonth, 32).getDate();
+        }
+
+        await fetchEvents();
+        showCalendar(currentMonth, currentYear);
+
+        document.getElementById('year').onchange = jump;
+        document.getElementById('month').onchange = jump;
+
+        document.getElementById('next').onclick = next;
+        document.getElementById('previous').onclick = previous;
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body id="body" touched="clickBody()">
+    <div class="wrapper">
+        <div class="container-calendar">
+            <h3 id="monthAndYear"></h3>
+            <div class="button-container-calendar">
+             <div class="footer-container-calendar">    <button id="previous">
+                <svg class="arrows" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1080 1080" xml:space="preserve">
+                <desc>Created with Fabric.js 5.2.4</desc>
+                <defs>
+                </defs>
+                <g transform="matrix(1 0 0 1 540 540)" id="2f2d7b06-1722-4709-8eb4-edae713838ff"  >
+                <rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+                </g>
+                <g transform="matrix(1 0 0 1 540 540)" id="827ceaff-cba2-4ce2-9fdc-a794b4f289d8"  >
+                </g>
+                <g transform="matrix(0 1 -1 0 540 540)" id="531cf8d7-f05c-4213-bfe4-01b7eaa64b77"  >
+                <path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-241.57, -241.57)" d="M 68.392 209.562 C 119.392 263.862 169.59199999999998 318.762 222.892 371.262 L 223.09199999999998 371.462 C 230.492 378.762 242.392 378.662 249.69199999999998 371.262 C 262.292 358.462 274.892 345.462 287.192 332.262 C 295.592 324.362 303.992 316.562 312.29200000000003 308.662 C 364.992 258.262 416.89200000000005 207.06199999999998 465.29200000000003 152.86199999999997 C 479.09200000000004 137.46199999999996 487.89200000000005 122.06199999999997 480.39200000000005 116.76199999999997 C 473.59200000000004 111.86199999999997 458.89200000000005 117.96199999999997 443.19200000000006 132.26199999999997 C 415.09200000000004 157.96199999999996 386.59200000000004 183.66199999999998 359.79200000000003 210.86199999999997 C 318.39200000000005 252.76199999999997 278.09200000000004 295.76199999999994 237.39200000000002 338.26199999999994 C 170.39200000000002 258.86199999999997 91.89200000000002 188.26199999999994 19.592000000000013 112.86199999999994 C 16.192000000000014 109.26199999999994 8.192000000000013 106.26199999999994 4.692000000000013 106.26199999999994 C -2.2079999999999878 106.26199999999994 -0.6079999999999872 113.66199999999995 3.7920000000000127 122.56199999999994 C 18.592 151.762 42.092 181.662 68.392 209.562 z" stroke-linecap="round" />
+                </g>
+                </svg>
+            </button>
+                 <select id="month">
+                     <option value=0><p>January</p></option>
+                     <option value=1>February</option>
+                     <option value=2>March</option>
+                     <option value=3>April</option>
+                     <option value=4>May</option>
+                     <option value=5>June</option>
+                     <option value=6>July</option>
+                     <option value=7>August</option>
+                     <option value=8>September</option>
+                     <option value=9>October</option>
+                     <option value=10>November</option>
+                     <option value=11>December</option>
+                 </select>
+                 <select id="year"></select>       
+                <button id="next">
+                    <svg class="arrows" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1080 1080" xml:space="preserve">
+                    <desc>Created with Fabric.js 5.2.4</desc>
+                    <defs>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="transparent"></rect>
+                    <g transform="matrix(1 0 0 1 540 540)" id="2f2d7b06-1722-4709-8eb4-edae713838ff"  >
+                    <rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+                    </g>
+                    <g transform="matrix(1 0 0 1 540 540)" id="827ceaff-cba2-4ce2-9fdc-a794b4f289d8"  >
+                    </g>
+                    <g transform="matrix(0 -1 1 0 540 540)" id="531cf8d7-f05c-4213-bfe4-01b7eaa64b77"  >
+                    <path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-241.57, -241.57)" d="M 68.392 209.562 C 119.392 263.862 169.59199999999998 318.762 222.892 371.262 L 223.09199999999998 371.462 C 230.492 378.762 242.392 378.662 249.69199999999998 371.262 C 262.292 358.462 274.892 345.462 287.192 332.262 C 295.592 324.362 303.992 316.562 312.29200000000003 308.662 C 364.992 258.262 416.89200000000005 207.06199999999998 465.29200000000003 152.86199999999997 C 479.09200000000004 137.46199999999996 487.89200000000005 122.06199999999997 480.39200000000005 116.76199999999997 C 473.59200000000004 111.86199999999997 458.89200000000005 117.96199999999997 443.19200000000006 132.26199999999997 C 415.09200000000004 157.96199999999996 386.59200000000004 183.66199999999998 359.79200000000003 210.86199999999997 C 318.39200000000005 252.76199999999997 278.09200000000004 295.76199999999994 237.39200000000002 338.26199999999994 C 170.39200000000002 258.86199999999997 91.89200000000002 188.26199999999994 19.592000000000013 112.86199999999994 C 16.192000000000014 109.26199999999994 8.192000000000013 106.26199999999994 4.692000000000013 106.26199999999994 C -2.2079999999999878 106.26199999999994 -0.6079999999999872 113.66199999999995 3.7920000000000127 122.56199999999994 C 18.592 151.762 42.092 181.662 68.392 209.562 z" stroke-linecap="round" />
+                    </g>
+                    </svg>
+                </button>
+            </div>
+             </div>
+             
+            <table class="table-calendar" id="calendar" data-lang="en">
+                <thead id="thead-month"></thead>
+                <tbody id="calendar-body"></tbody>
+            </table>
+        </div>
+     </div>
+</body>
+</html>
+    </div>
+</body>
+</html>
